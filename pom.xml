@@ -36,6 +36,11 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.27</version>
     </dependency>
+    <dependency>
+      <groupId>org.xerial</groupId>
+      <artifactId>sqlite-jdbc</artifactId>
+      <version>3.45.2.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>MExchange1</finalName>

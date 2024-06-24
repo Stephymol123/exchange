@@ -104,8 +104,18 @@
         <input type="password" id="password" name="password" required>
 
         <input type="submit" value="Login">
+        <input type ="text">
 
     </form>
+    <p>
+        Haven't signed up?
+        <a
+                href = "register.jsp"
+                style="color: blue; cursor: pointer"
+        >
+            Sign Up
+        </a>
+    </p>
     <c:if test="${not empty message}">
         <p style="color:red;">${message}</p>
     </c:if>
