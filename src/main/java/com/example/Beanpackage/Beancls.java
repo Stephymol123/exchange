@@ -1,9 +1,14 @@
 package com.example.Beanpackage;
 
-
 public class Beancls {
-    private int id,phnno;
-    private String firstname,lastname,username,password,email;
+    private int id;
+    private String firstname;
+    private String lastname;
+    private String username;
+    private String password;
+    private String email;
+
+    // Getters and Setters
 
     public int getId() {
         return id;
@@ -11,14 +16,6 @@ public class Beancls {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getPhnno() {
-        return phnno;
-    }
-
-    public void setPhnno(int phnno) {
-        this.phnno = phnno;
     }
 
     public String getFirstname() {
