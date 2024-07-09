@@ -1,7 +1,7 @@
 package com.example.Daopackage;
 
 import com.example.Beanpackage.Beancls;
-import com.example.DatabaseConnection;
+import com.example.utils.DatabaseConnection;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,9 +9,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Daocls {
-
-    private static final String INSERT_USERS_SQL = "INSERT INTO users (firstname, lastname, username, password, email) VALUES (?, ?, ?, ?, ?)";
-    private static final String SELECT_USER_BY_USERNAME_AND_PASSWORD = "SELECT id, username, email FROM users WHERE username = ? and password = ?";
 
     private Connection getConnection() throws SQLException {
         // Implement your database connection logic here
@@ -27,6 +24,7 @@ public class Daocls {
     }
 
     public void registerUser(Beancls beancls) throws SQLException {
+        String INSERT_USERS_SQL = "INSERT INTO users (firstname, lastname, username, password, email) VALUES (?, ?, ?, ?, ?)";
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
             preparedStatement.setString(1, beancls.getFirstname());
@@ -41,6 +39,7 @@ public class Daocls {
     }
 
     public Beancls validateUser(String username, String password) throws SQLException {
+        String SELECT_USER_BY_USERNAME_AND_PASSWORD = "SELECT id, username, email FROM users WHERE username = ? and password = ?";
         Beancls beancls = null;
         try (Connection connection = getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_USERNAME_AND_PASSWORD)) {
@@ -59,4 +58,5 @@ public class Daocls {
         }
         return beancls;
     }
+
 }

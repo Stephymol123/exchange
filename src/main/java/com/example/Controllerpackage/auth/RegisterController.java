@@ -1,4 +1,4 @@
-package com.example.Controllerpackage;
+package com.example.Controllerpackage.auth;
 
 import com.example.Daopackage.Daocls;
 import com.example.Beanpackage.Beancls;

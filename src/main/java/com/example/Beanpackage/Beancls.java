@@ -1,5 +1,7 @@
 package com.example.Beanpackage;
 
+import java.util.List;
+
 public class Beancls {
     private int id;
     private String firstname;
@@ -8,7 +10,7 @@ public class Beancls {
     private String password;
     private String email;
 
-    // Getters and Setters
+// Getters and Setters
 
     public int getId() {
         return id;
@@ -57,4 +59,5 @@ public class Beancls {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }
