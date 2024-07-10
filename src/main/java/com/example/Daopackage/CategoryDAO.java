@@ -1,6 +1,6 @@
-package com.example.Beanpackage.category;
+package com.example.Daopackage;
 
-import com.example.Beanpackage.category.CategoryBeanCls;
+import com.example.Beanpackage.CategoryBeanCls;
 import com.example.utils.DatabaseConnection;
 
 import java.sql.Connection;
