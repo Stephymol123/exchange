@@ -1,10 +1,18 @@
-package com.example.Beanpackage.product;
+package com.example.Beanpackage;
 
-import java.io.Serializable;
+public class ProductBeanCls {
+    private int id;
+    private int user_id;
+    private int category_id;
+    private String pname;
+    private double price;
+    private String description;
+    private int quantity;
+    private String pimages; // Comma-separated image URLs
+    private String firstImageUrl; // First image URL
+    private String categoryName; // Category name
 
-public class ProductBeanCls implements Serializable {
-    private static final long serialVersionUID = 1L;
-
+    // Getters and setters for all fields
     public int getId() {
         return id;
     }
@@ -13,20 +21,6 @@ public class ProductBeanCls implements Serializable {
         this.id = id;
     }
 
-    private int id;
-    private int user_id;
-    private int category_id;
-    private String pname;
-    private double price;
-    private String description;
-    private int quantity;
-    private String pimage;
-
-    // No-argument constructor
-    public ProductBeanCls() {
-    }
-
-    // Getters and Setters
     public int getUser_id() {
         return user_id;
     }
@@ -75,12 +69,30 @@ public class ProductBeanCls implements Serializable {
         this.quantity = quantity;
     }
 
-    public String getPimage() {
-        return pimage;
+    public String getPimages() {
+        return pimages;
     }
 
-    public void setPimage(String pimage) {
-        this.pimage = pimage;
+    public void setPimages(String pimages) {
+        if (pimages != null && !pimages.isEmpty()) {
+            this.pimages = pimages;
+            String[] urls = pimages.split(",");
+            this.firstImageUrl = urls[0].replace("\"", "").trim();
+        } else {
+            this.pimages = null;
+            this.firstImageUrl = null;
+        }
     }
 
+    public String getFirstImageUrl() {
+        return firstImageUrl;
+    }
+
+    public String getCategoryName() {
+        return categoryName;
+    }
+
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+    }
 }

@@ -10,6 +10,7 @@
     <p style="color:red;">${message}</p>
 </c:if>
 
-<a href="user-add-item.jsp">add new  item</a>
+<a href="addProduct">add new  item</a>
+<a href="allProducts">View all Items</a>
 </body>
 </html>

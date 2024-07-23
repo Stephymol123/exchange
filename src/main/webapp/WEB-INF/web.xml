@@ -18,6 +18,17 @@
 <!--    <url-pattern>/login</url-pattern>-->
 <!--  </servlet-mapping>-->
 
+  <servlet>
+    <servlet-name>InitFirebaseServlet</servlet-name>
+    <servlet-class>com.example.utils.InitFirebase</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitFirebaseServlet</servlet-name>
+    <url-pattern>/initFirebase</url-pattern>
+  </servlet-mapping>
+
+
   <!-- JSTL Configuration -->
   <jsp-config>
     <jsp-property-group>

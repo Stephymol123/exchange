@@ -1,4 +1,4 @@
-package com.example.Beanpackage.category;
+package com.example.Beanpackage;
 
 import java.io.Serializable;
 
